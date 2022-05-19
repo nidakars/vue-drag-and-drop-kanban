@@ -1,16 +1,11 @@
 <template>
   <div id="app">
     <div class="dd-info">
-      <i>All the cards displayed below are Vue Slots and can be totally customized to be any way</i>
-      <br/>
-      <br/>
     </div>
     
     <drag-drop
       :dropzones="dropGroups"
-      :dropzonesTitle="'XYZ Company Teams'"
       :originalData="stories"
-      :originalTitle="'Tasks to be distributed'"
       :inPlace="true"
       :enableSave="true"
       :enableCancel="true"
@@ -74,18 +69,7 @@ export default {
           name: 'Business Team',
           children: []
         },
-        {
-          name: 'Tech Dept',
-          children: []
-        },
-        {
-          name: 'Marketing Dept',
-          children: []
-        },
-        {
-          name: 'Accounting Dept',
-          children: []
-        }
+        
       ]
     }
   },
