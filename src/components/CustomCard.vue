@@ -1,33 +1,35 @@
 <template>
   <div class="cc-card">
-    <h3>{{data.title}}</h3>
+    <img class="icon" src="../assets/logo.png" alt="avatar" />
+    <h3>{{ data.title }}</h3>
     <p>
-      {{data.description}}
+      {{ data.description }}
     </p>
-    <button v-if="!data.done" class="cc-btn" @click="markDone()">
-      Mark Done
-    </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CustomCard',
-  props: ['data'],
+  name: "CustomCard",
+  props: ["data"],
   methods: {
     markDone() {
-      this.$emit('done', this.data);
-    }
-  }
-}
+      this.$emit("done", this.data);
+    },
+  },
+};
 </script>
 
 <style>
+.icon {
+  height: 30px;
+}
 .cc-card {
   padding: 10px;
   text-align: left;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(161, 161, 163);
   margin: 5px;
   background-color: white;
   min-width: 200px;
